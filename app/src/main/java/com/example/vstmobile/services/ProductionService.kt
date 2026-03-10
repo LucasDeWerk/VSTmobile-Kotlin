@@ -8,7 +8,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val PROD_TAG = "VST_PRODUCTION"
-private const val PROD_BASE = "https://compras.vstsolution.com"
+private val PROD_BASE = ApiConfig.BASE_API
 
 data class ProdRankingItem(
     val descProduto: String,

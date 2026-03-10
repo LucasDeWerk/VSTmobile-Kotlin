@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val LC_TAG = "VST_LIMITE_CREDITO"
-private const val LC_BASE = "https://compras.vstsolution.com"
+private val LC_BASE = ApiConfig.BASE_API
 
 data class ClienteLC(
     val idClifor: Int,

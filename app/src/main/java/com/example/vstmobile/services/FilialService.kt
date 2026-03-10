@@ -8,7 +8,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val FILIAL_TAG = "VST_FILIAL"
-private const val BASE_URL = "https://compras.vstsolution.com"
+private val BASE_URL = ApiConfig.BASE_API
 
 data class Filial(
     val idFilial: Int,

@@ -9,8 +9,8 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val TPLC_TAG         = "VST_TPAGAR_LC"
-private const val TPLC_BASE_API    = "https://compras.vstsolution.com"
-private const val TPLC_BASE_REPORT = "https://report.vstsolution.com"
+private val TPLC_BASE_API    = ApiConfig.BASE_API
+private val TPLC_BASE_REPORT = ApiConfig.BASE_REPORT
 
 data class LocalCobranca(
     val idLocalCobranca: Int,

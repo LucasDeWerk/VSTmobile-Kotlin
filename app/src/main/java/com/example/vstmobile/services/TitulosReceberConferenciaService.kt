@@ -9,8 +9,8 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val TRC_TAG         = "VST_TRECEBER_CONF"
-private const val TRC_BASE_API    = "https://compras.vstsolution.com"
-private const val TRC_BASE_REPORT = "https://report.vstsolution.com"
+private val TRC_BASE_API    = ApiConfig.BASE_API
+private val TRC_BASE_REPORT = ApiConfig.BASE_REPORT
 
 data class ClienteTRC(
     val idClifor: Int,

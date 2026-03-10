@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val CNT_TAG  = "VST_COUNTING"
-private const val CNT_BASE = "https://compras.vstsolution.com"
+private val CNT_BASE = ApiConfig.BASE_API
 
 data class CountingResult(val success: Boolean, val inventarioId: Int? = null, val error: String? = null)
 

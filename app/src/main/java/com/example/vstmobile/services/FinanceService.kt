@@ -8,7 +8,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val FIN_TAG = "VST_FINANCE"
-private const val BASE_URL = "https://compras.vstsolution.com"
+private val BASE_URL = ApiConfig.BASE_API
 
 data class TituloInfo(val saldo: Double = 0.0, val qtdTitulos: Int = 0)
 data class DashboardData(

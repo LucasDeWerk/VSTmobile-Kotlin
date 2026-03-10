@@ -121,7 +121,7 @@ class DeviceService(private val context: Context) {
                 )
             }
 
-            val url = "https://compras.vstsolution.com/dispositivo/$guid"
+            val url = "${ApiConfig.BASE_API}/dispositivo/$guid"
             val startTime = System.currentTimeMillis()
 
             // Log da requisição
@@ -154,7 +154,7 @@ class DeviceService(private val context: Context) {
             }
 
         } catch (error: Exception) {
-            logError("GET", "https://compras.vstsolution.com/dispositivo/$guid", error.message ?: "Erro desconhecido", error)
+            logError("GET", "${ApiConfig.BASE_API}/dispositivo/$guid", error.message ?: "Erro desconhecido", error)
             return@withContext DeviceCheckResult(success = false, error = error.message ?: "Erro ao verificar dispositivo")
         }
     }
@@ -171,7 +171,7 @@ class DeviceService(private val context: Context) {
         phoneNumber: String
     ): DeviceRegisterResult = withContext(Dispatchers.IO) {
         try {
-            val url = "https://compras.vstsolution.com/dispositivo/$companyCode"
+            val url = "${ApiConfig.BASE_API}/dispositivo/$companyCode"
             val startTime = System.currentTimeMillis()
 
             val bodyJson = JSONObject().apply {
@@ -222,7 +222,7 @@ class DeviceService(private val context: Context) {
             }
 
         } catch (error: Exception) {
-            logError("POST", "https://compras.vstsolution.com/dispositivo/$companyCode", error.message ?: "Erro desconhecido", error)
+            logError("POST", "${ApiConfig.BASE_API}/dispositivo/$companyCode", error.message ?: "Erro desconhecido", error)
             return@withContext DeviceRegisterResult(success = false, error = error.message ?: "Erro ao registrar dispositivo")
         }
     }
@@ -240,7 +240,7 @@ class DeviceService(private val context: Context) {
                 )
             }
 
-            val url = "https://compras.vstsolution.com/dispositivoemp/$guid"
+            val url = "${ApiConfig.BASE_API}/dispositivoemp/$guid"
             val startTime = System.currentTimeMillis()
 
             // Log da requisição
@@ -275,7 +275,7 @@ class DeviceService(private val context: Context) {
             }
 
         } catch (error: Exception) {
-            logError("GET", "https://compras.vstsolution.com/dispositivoemp/$guid", error.message ?: "Erro desconhecido", error)
+            logError("GET", "${ApiConfig.BASE_API}/dispositivoemp/$guid", error.message ?: "Erro desconhecido", error)
             return@withContext CompaniesResult(success = false, error = error.message ?: "Erro ao buscar empresas")
         }
     }

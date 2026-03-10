@@ -9,8 +9,8 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val TPC_TAG = "VST_TPAGAR_CONF"
-private const val TPC_BASE_API = "https://compras.vstsolution.com"
-private const val TPC_BASE_REPORT = "https://report.vstsolution.com"
+private val TPC_BASE_API = ApiConfig.BASE_API
+private val TPC_BASE_REPORT = ApiConfig.BASE_REPORT
 
 data class FornecedorTPC(
     val idClifor: Int,

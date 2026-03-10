@@ -227,6 +227,30 @@ fun Sidebar(
             )
         ),
         SidebarItem(
+            title = "PCP",
+            iconRes = R.drawable.border_all_24px,
+            color = White.copy(alpha = 0.7f),
+            route = "PCP",
+            hasSubItems = true,
+            subItems = listOf(
+                SidebarSubItem(
+                    title = "Dashboard",
+                    route = "PcpDashboard",
+                    description = "Visão geral do PCP"
+                ),
+                SidebarSubItem(
+                    title = "Acompanhamento de Produção",
+                    route = "PcpAcompanhamentoProducao",
+                    description = "Acompanhe a produção em tempo real"
+                ),
+                SidebarSubItem(
+                    title = "Programação",
+                    route = "PcpProgramacao",
+                    description = "Programação da produção"
+                )
+            )
+        ),
+        SidebarItem(
             title = "Estoque",
             iconRes = R.drawable.box_24px,
             color = White.copy(alpha = 0.7f),

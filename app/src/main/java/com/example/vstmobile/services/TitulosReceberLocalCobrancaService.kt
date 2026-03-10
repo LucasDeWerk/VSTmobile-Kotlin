@@ -7,7 +7,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val TRLC_TAG         = "VST_TRECEBER_LC"
-private const val TRLC_BASE_REPORT = "https://report.vstsolution.com"
+private val TRLC_BASE_REPORT = ApiConfig.BASE_REPORT
 
 // Locais de cobrança fixos (JS usa esses IDs estáticos)
 data class LocalCobrancaReceber(

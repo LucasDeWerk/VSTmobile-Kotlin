@@ -8,7 +8,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val AUTH_TAG = "VST_AUTH"
-private const val BASE_URL = "https://compras.vstsolution.com"
+private val BASE_URL = ApiConfig.BASE_API
 
 class AuthService {
 

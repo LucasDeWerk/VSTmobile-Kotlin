@@ -23,6 +23,9 @@ import com.example.vstmobile.ui.screens.inventory.InventoryScreen
 import com.example.vstmobile.ui.screens.inventory.CountingScreen
 import com.example.vstmobile.ui.screens.inventory.AICountingScreen
 import com.example.vstmobile.ui.screens.settings.SettingsScreen
+import com.example.vstmobile.ui.screens.pcp.PcpDashboardScreen
+import com.example.vstmobile.ui.screens.pcp.PcpAcompanhamentoProducaoScreen
+import com.example.vstmobile.ui.screens.pcp.PcpProgramacaoScreen
 
 sealed class Screen(val route: String) {
     object Login : Screen("login")
@@ -53,6 +56,9 @@ sealed class Screen(val route: String) {
         ) = "ai_counting/$idEmpresa/$idFilial/$idInventario/$idProduto/$idAlmox/$qtdEstoque/$format?desc=${java.net.URLEncoder.encode(descProduto, "UTF-8")}"
     }
     object Settings : Screen("settings")
+    object PcpDashboard : Screen("PcpDashboard")
+    object PcpAcompanhamentoProducao : Screen("PcpAcompanhamentoProducao")
+    object PcpProgramacao : Screen("PcpProgramacao")
 }
 
 @Composable
@@ -101,6 +107,15 @@ fun NavGraph(navController: NavHostController) {
         }
         composable(route = Screen.Dre.route) {
             DreScreen(navController = navController)
+        }
+        composable(route = Screen.PcpDashboard.route) {
+            PcpDashboardScreen(navController = navController)
+        }
+        composable(route = Screen.PcpAcompanhamentoProducao.route) {
+            PcpAcompanhamentoProducaoScreen(navController = navController)
+        }
+        composable(route = Screen.PcpProgramacao.route) {
+            PcpProgramacaoScreen(navController = navController)
         }
         composable(route = Screen.Production.route) {
             ProductionScreen(navController = navController)

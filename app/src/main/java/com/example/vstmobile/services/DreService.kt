@@ -9,8 +9,8 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val DRE_TAG         = "VST_DRE"
-private const val DRE_BASE_API    = "https://compras.vstsolution.com"
-private const val DRE_BASE_REPORT = "https://report.vstsolution.com"
+private val DRE_BASE_API    = ApiConfig.BASE_API
+private val DRE_BASE_REPORT = ApiConfig.BASE_REPORT
 
 data class ModeloDre(
     val id: Int,

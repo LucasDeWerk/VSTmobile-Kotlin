@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val APO_TAG = "VST_APROVACAO"
-private const val APO_BASE = "https://compras.vstsolution.com"
+private val APO_BASE = ApiConfig.BASE_API
 
 data class PedidoOrcamento(
     val idSaida: Int,

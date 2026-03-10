@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val INV_TAG  = "VST_INVENTORY"
-private const val INV_BASE = "https://compras.vstsolution.com"
+private val INV_BASE = ApiConfig.BASE_API
 
 // ── Modelos de dados ──────────────────────────────────────────────────────────
 data class Almoxarifado(val id: Int, val descricao: String)

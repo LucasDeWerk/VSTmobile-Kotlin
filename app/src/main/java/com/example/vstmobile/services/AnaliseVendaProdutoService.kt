@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val AVP_TAG = "VST_ANALISE_PRODUTO"
-private const val AVP_BASE = "https://compras.vstsolution.com"
+private val AVP_BASE = ApiConfig.BASE_API
 
 // ── Data classes ──────────────────────────────────────────────────────────────
 

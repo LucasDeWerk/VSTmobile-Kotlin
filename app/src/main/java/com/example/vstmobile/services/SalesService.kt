@@ -9,7 +9,7 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 private const val SALES_TAG = "VST_SALES"
-private const val SALES_BASE = "https://compras.vstsolution.com"
+private val SALES_BASE = ApiConfig.BASE_API
 
 // ── Data classes ──────────────────────────────────────────────────────────────
 
